@@ -111,12 +111,12 @@
                         <div class="tags"><span class="tag">Computer vision</span><span class="tag">Generative AI</span><span class="tag">Data Curation</span></div>
                     </div>
                 </button>
-                <button class="card" data-open="bubble">
+                <button class="card" data-open="agents">
                     <img src="img/yellow.png" alt="">
                     <div>
-                        <h3>Outside the AI Bubble</h3>
-                        <p>Personal projects.</p>
-                        <div class="tags"><span class="tag">Sport</span><span class="tag">Hobbies</span></div>
+                        <h3>Conversational Agent Evaluation <span class="tag status">Ongoing</span></h3>
+                        <p>Stress-testing customer-service agents against adversarial and uncooperative user personas.</p>
+                        <div class="tags"><span class="tag">LLM Evaluation</span><span class="tag">Agents</span><span class="tag">Python</span></div>
                     </div>
                 </button>
                 
@@ -217,7 +217,7 @@ const PROJECTS = {
         lead: 'Two text-classification tasks, four models, one question: when is a Transformer worth its cost?',
         points: [
             'Authorship: Chirac vs. Mitterrand speeches, about 57,000 sentences with a 6.6:1 imbalance, extended with 400 additional speeches.',
-            'Sentiment: 27,000 movie reviews, half positive, half negative.',
+            'Sentiment: 21,000 movie reviews, half positive, half negative.',
             'CamemBERT-large and DistilBERT (Hugging Face Trainer, Colab) vs. TF-IDF/SVM and a Bi-LSTM (PyTorch), across four preprocessing levels with GridSearchCV.',
             'Style: CamemBERT-large reaches F1 0.73 vs. 0.68 for the SVM and 0.52 for the Bi-LSTM.',
             'Sentiment: the SVM matches DistilBERT (F1 around 0.91-0.92) at a far lower computational cost.'
@@ -261,19 +261,21 @@ const PROJECTS = {
         ],
         report: 'reports/birdclef-report.pdf', code: 'https://github.com/linaml/birdclef-2026-ml'
     },
-    bubble: {
-        title: 'Outside the AI Bubble',
-        tags: ['Personal'],
-        lead: [
-            'Hobbies: Knitting, Calisthenics, Crochet'
-        ],
-        points: [], report: null, code: null
-    },
+    agents: {
+            title: 'Conversational AI Agent Evaluation',
+            tags: ['LLM Evaluation', 'Agents', 'Python', 'LiteLLM', 'pytest', 'Ongoing'],
+            lead: 'Evaluating how customer-service agents hold up when user attitudes shift-from cooperative to aggressive or policy-breaking.',
+            points: [
+                'Building a new evaluation methodology across retail, airline, and telecom environments on top of τ²-Bench.',
+                'Designing a multi-model evaluation pipeline (Python, LiteLLM, pytest) to measure reliability and policy adherence across realistic customer-service tasks.'
+            ],
+            report: null, code: null
+        },
     dino: {
         title: 'Were t-rexes green?',
         tags: ['Computer vision', 'Generative AI', 'Dataset Curation', 'Ongoing'],
         lead: ' Animal image generation from skeleteons',
-        points : ['What happens if we feed a model with skeleteon representation along with the animals appearance? Can it learn what other animals look like without having ever seeing one?',
+        points : ['What happens if we feed a model with skeleteon representation along with the animals appearance? Can it learn what other animals look like without having ever seen one?',
         'Current work: dataset curation (creating 3D models for each animal )' ],
         
         report: null, code: null
